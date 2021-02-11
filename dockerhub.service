@@ -1,0 +1,13 @@
+[Unit]
+Description=Docker Hub Webhook
+After=network.target network-online.target nss-lookup.target
+
+[Service]
+User=nobody
+Restart=on-failure
+Type=simple
+WorkingDirectory=/opt/Webhook
+ExecStart=/usr/bin/python3 /opt/Webhook/server.py
+
+[Install]
+WantedBy=multi-user.target
