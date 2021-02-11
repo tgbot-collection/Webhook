@@ -63,7 +63,7 @@ class WebhookHandler(BaseHandler):
             api = "https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}" \
                   "&text={hostname}\n\n<pre>{output}</pre>" \
                   "&parse_mode=html"
-            requests.get(api.format(token=token, hostname=hostname, output=output, chat_id=chat_id))
+            requests.get(api.format(token=token, hostname=hostname, output=output.decode("u8"), chat_id=chat_id))
 
     @gen.coroutine
     def get(self):
