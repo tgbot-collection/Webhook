@@ -3,4 +3,4 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 
 docker pull bennythink/yyetsbot
 docker-compose -f /home/WebsiteRunner/docker-compose.yml up -d
-docker system prune -a --volumes -f
+#docker system prune -a --volumes -f
